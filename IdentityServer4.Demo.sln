@@ -5,11 +5,19 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_ClientCredentials", "1_ClientCredentials", "{E2B0A08E-6B0B-4595-8145-A6963E8A1018}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientCredentials.Api", "ClientCredentials\ClientCredentials.Api\ClientCredentials.Api.csproj", "{75EE874E-F169-4F90-8865-F0A05EA8F44F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_ResourceOwnerPasswords", "2_ResourceOwnerPasswords", "{5AEB0EF8-7145-4093-B60E-B8E2A340537D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientCredentials.Client", "ClientCredentials\ClientCredentials.Client\ClientCredentials.Client.csproj", "{28D54631-C546-40A5-AE83-25A9714F22A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientCredentials.Api", "1_ClientCredentials\ClientCredentials.Api\ClientCredentials.Api.csproj", "{0759B24B-EDB2-416E-9630-78916D9AE01B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientCredentials.Server", "ClientCredentials\ClientCredentials.Server\ClientCredentials.Server.csproj", "{5FE55ED2-61B5-4D99-B9F9-3EE24AFFD3CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientCredentials.Client", "1_ClientCredentials\ClientCredentials.Client\ClientCredentials.Client.csproj", "{73B7B8F8-FF0D-418D-88F9-13306EAC578A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientCredentials.Server", "1_ClientCredentials\ClientCredentials.Server\ClientCredentials.Server.csproj", "{58ED9D37-9727-47B2-AD0A-F1E5C0B6A577}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceOwnerPasswords.Api", "2_ResourceOwnerPasswords\ResourceOwnerPasswords.Api\ResourceOwnerPasswords.Api.csproj", "{5256665E-8732-4AAD-9D54-982F779B7689}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceOwnerPasswords.Client", "2_ResourceOwnerPasswords\ResourceOwnerPasswords.Client\ResourceOwnerPasswords.Client.csproj", "{DA7B553C-A1E2-4CD8-97C0-40682BE8754B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceOwnerPasswords.Server", "2_ResourceOwnerPasswords\ResourceOwnerPasswords.Server\ResourceOwnerPasswords.Server.csproj", "{006A67C1-3CC7-4911-8920-DB27E038C93A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,25 +25,40 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{75EE874E-F169-4F90-8865-F0A05EA8F44F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75EE874E-F169-4F90-8865-F0A05EA8F44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75EE874E-F169-4F90-8865-F0A05EA8F44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75EE874E-F169-4F90-8865-F0A05EA8F44F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28D54631-C546-40A5-AE83-25A9714F22A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28D54631-C546-40A5-AE83-25A9714F22A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28D54631-C546-40A5-AE83-25A9714F22A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28D54631-C546-40A5-AE83-25A9714F22A3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5FE55ED2-61B5-4D99-B9F9-3EE24AFFD3CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5FE55ED2-61B5-4D99-B9F9-3EE24AFFD3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5FE55ED2-61B5-4D99-B9F9-3EE24AFFD3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5FE55ED2-61B5-4D99-B9F9-3EE24AFFD3CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0759B24B-EDB2-416E-9630-78916D9AE01B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0759B24B-EDB2-416E-9630-78916D9AE01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0759B24B-EDB2-416E-9630-78916D9AE01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0759B24B-EDB2-416E-9630-78916D9AE01B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B7B8F8-FF0D-418D-88F9-13306EAC578A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B7B8F8-FF0D-418D-88F9-13306EAC578A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B7B8F8-FF0D-418D-88F9-13306EAC578A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B7B8F8-FF0D-418D-88F9-13306EAC578A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58ED9D37-9727-47B2-AD0A-F1E5C0B6A577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58ED9D37-9727-47B2-AD0A-F1E5C0B6A577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58ED9D37-9727-47B2-AD0A-F1E5C0B6A577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58ED9D37-9727-47B2-AD0A-F1E5C0B6A577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5256665E-8732-4AAD-9D54-982F779B7689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5256665E-8732-4AAD-9D54-982F779B7689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5256665E-8732-4AAD-9D54-982F779B7689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5256665E-8732-4AAD-9D54-982F779B7689}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7B553C-A1E2-4CD8-97C0-40682BE8754B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7B553C-A1E2-4CD8-97C0-40682BE8754B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7B553C-A1E2-4CD8-97C0-40682BE8754B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7B553C-A1E2-4CD8-97C0-40682BE8754B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{006A67C1-3CC7-4911-8920-DB27E038C93A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{006A67C1-3CC7-4911-8920-DB27E038C93A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{006A67C1-3CC7-4911-8920-DB27E038C93A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{006A67C1-3CC7-4911-8920-DB27E038C93A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{75EE874E-F169-4F90-8865-F0A05EA8F44F} = {E2B0A08E-6B0B-4595-8145-A6963E8A1018}
-		{28D54631-C546-40A5-AE83-25A9714F22A3} = {E2B0A08E-6B0B-4595-8145-A6963E8A1018}
-		{5FE55ED2-61B5-4D99-B9F9-3EE24AFFD3CC} = {E2B0A08E-6B0B-4595-8145-A6963E8A1018}
+		{0759B24B-EDB2-416E-9630-78916D9AE01B} = {E2B0A08E-6B0B-4595-8145-A6963E8A1018}
+		{73B7B8F8-FF0D-418D-88F9-13306EAC578A} = {E2B0A08E-6B0B-4595-8145-A6963E8A1018}
+		{58ED9D37-9727-47B2-AD0A-F1E5C0B6A577} = {E2B0A08E-6B0B-4595-8145-A6963E8A1018}
+		{5256665E-8732-4AAD-9D54-982F779B7689} = {5AEB0EF8-7145-4093-B60E-B8E2A340537D}
+		{DA7B553C-A1E2-4CD8-97C0-40682BE8754B} = {5AEB0EF8-7145-4093-B60E-B8E2A340537D}
+		{006A67C1-3CC7-4911-8920-DB27E038C93A} = {5AEB0EF8-7145-4093-B60E-B8E2A340537D}
 	EndGlobalSection
 EndGlobal
