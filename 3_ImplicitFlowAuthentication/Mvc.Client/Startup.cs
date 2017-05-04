@@ -60,7 +60,7 @@ namespace Mvc.Client
                 AuthenticationScheme = "oidc",
                 SignInScheme = "Cookies",
 
-                Authority = "http://localhost:5004",
+                Authority = "http://localhost:5000",
                 RequireHttpsMetadata = false,
 
                 ClientId = "mvc",
