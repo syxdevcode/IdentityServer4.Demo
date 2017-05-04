@@ -72,6 +72,8 @@ namespace HybridFlow.Server
                         new Secret("secret".Sha256())
                     },
 
+                    /* signin-oidc 固定字符串
+                     */
                     RedirectUris = { "http://localhost:5007/signin-oidc" },
                     PostLogoutRedirectUris = { "http://localhost:5007/signout-callback-oidc" },
 
