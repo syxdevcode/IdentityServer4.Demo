@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceOwnerPasswords.Clie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceOwnerPasswords.Server", "2_ResourceOwnerPasswords\ResourceOwnerPasswords.Server\ResourceOwnerPasswords.Server.csproj", "{006A67C1-3CC7-4911-8920-DB27E038C93A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_ImplicitFlowAuthentication", "3_ImplicitFlowAuthentication", "{E5886D8C-BE12-47CF-AF59-DB0EBA84E760}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_4_ImplicitFlowAuthentication", "3_4_ImplicitFlowAuthentication", "{E5886D8C-BE12-47CF-AF59-DB0EBA84E760}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{F5192C9E-439C-4BC2-9982-5A7FC478BEBA}"
 EndProject
@@ -32,6 +32,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenIDConnect.Api", "3_ImplicitFlowAuthentication\OpenIDConnect.Api\OpenIDConnect.Api.csproj", "{8D5E41E3-8E2C-463E-BBBA-DC763049B672}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenIDConnect.Server", "3_ImplicitFlowAuthentication\OpenIDConnect.Server\OpenIDConnect.Server.csproj", "{29489ADA-DF5F-458D-97D5-F7E8DDA19608}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5_HybridFlowAuthenticationWithApiAccess", "5_HybridFlowAuthenticationWithApiAccess", "{2CE4AA1E-3E94-4252-885A-9A574533F0C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HybridFlow.Server", "5_HybridFlowAuthenticationWithApiAccess\HybridFlow.Server\HybridFlow.Server.csproj", "{DDB4E9D1-8523-4491-8816-CEC62B83D7AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HybridFlowMvc.Client", "5_HybridFlowAuthenticationWithApiAccess\HybridFlowMvc.Client\HybridFlowMvc.Client.csproj", "{448D8072-4CD9-4A02-92EA-ECF32CA397AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridFlow.Api", "5_HybridFlowAuthenticationWithApiAccess\HybridFlow.Api\HybridFlow.Api.csproj", "{A4234975-73DB-4000-90F7-B6CD34859CC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +91,18 @@ Global
 		{29489ADA-DF5F-458D-97D5-F7E8DDA19608}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29489ADA-DF5F-458D-97D5-F7E8DDA19608}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29489ADA-DF5F-458D-97D5-F7E8DDA19608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB4E9D1-8523-4491-8816-CEC62B83D7AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB4E9D1-8523-4491-8816-CEC62B83D7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB4E9D1-8523-4491-8816-CEC62B83D7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB4E9D1-8523-4491-8816-CEC62B83D7AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{448D8072-4CD9-4A02-92EA-ECF32CA397AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{448D8072-4CD9-4A02-92EA-ECF32CA397AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{448D8072-4CD9-4A02-92EA-ECF32CA397AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{448D8072-4CD9-4A02-92EA-ECF32CA397AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4234975-73DB-4000-90F7-B6CD34859CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4234975-73DB-4000-90F7-B6CD34859CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4234975-73DB-4000-90F7-B6CD34859CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4234975-73DB-4000-90F7-B6CD34859CC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,5 +120,8 @@ Global
 		{44A77C30-22CB-45B3-86E8-F0B4A119DD7C} = {F5192C9E-439C-4BC2-9982-5A7FC478BEBA}
 		{8D5E41E3-8E2C-463E-BBBA-DC763049B672} = {E5886D8C-BE12-47CF-AF59-DB0EBA84E760}
 		{29489ADA-DF5F-458D-97D5-F7E8DDA19608} = {E5886D8C-BE12-47CF-AF59-DB0EBA84E760}
+		{DDB4E9D1-8523-4491-8816-CEC62B83D7AB} = {2CE4AA1E-3E94-4252-885A-9A574533F0C5}
+		{448D8072-4CD9-4A02-92EA-ECF32CA397AE} = {2CE4AA1E-3E94-4252-885A-9A574533F0C5}
+		{A4234975-73DB-4000-90F7-B6CD34859CC8} = {2CE4AA1E-3E94-4252-885A-9A574533F0C5}
 	EndGlobalSection
 EndGlobal
