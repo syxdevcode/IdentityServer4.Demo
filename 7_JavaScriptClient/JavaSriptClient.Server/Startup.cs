@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using IdentityServer4;
 
 namespace JavaSriptClient.Server
 {
@@ -16,7 +17,7 @@ namespace JavaSriptClient.Server
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
@@ -29,6 +30,14 @@ namespace JavaSriptClient.Server
         {
             // Add framework services.
             services.AddMvc();
+
+            // configure identity server with in-memory stores, keys, clients and scopes
+            services.AddIdentityServer()
+                .AddTemporarySigningCredential()
+                .AddInMemoryIdentityResources(Config.GetIdentityResources())
+                .AddInMemoryApiResources(Config.GetApiResources())
+                .AddInMemoryClients(Config.GetClients())
+                .AddTestUsers(Config.GetUsers());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,14 +56,21 @@ namespace JavaSriptClient.Server
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseIdentityServer();
+
+            app.UseGoogleAuthentication(new GoogleOptions
+            {
+                AuthenticationScheme = "Google",
+                DisplayName = "Google",
+                SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme,
+
+                ClientId = "434483408261-55tc8n0cs4ff1fe21ea8df2o443v2iuc.apps.googleusercontent.com",
+                ClientSecret = "3gcoTrEDPPJ0ukn_aYYT6PWo"
+            });
+
             app.UseStaticFiles();
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace JavaScript.Client
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
+                .UseUrls("http://localhost:5011")
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
