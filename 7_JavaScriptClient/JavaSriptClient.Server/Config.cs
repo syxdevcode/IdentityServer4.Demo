@@ -102,6 +102,25 @@ namespace JavaSriptClient.Server
                         IdentityServerConstants.StandardScopes.Profile,
                         "api1"
                     },
+                },
+                // JavaScript Client 2
+                new Client
+                {
+                    ClientId = "js2",
+                    ClientName = "JavaScript Client 2",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowAccessTokensViaBrowser = true,
+
+                    RedirectUris =           { "http://localhost:5015/callback.html" },
+                    PostLogoutRedirectUris = { "http://localhost:5015/index.html" },
+                    AllowedCorsOrigins =     { "http://localhost:5015" },
+
+                    AllowedScopes =
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "api1"
+                    }
                 }
             };
         }

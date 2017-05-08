@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace JavaScriptClient.Api
+namespace EntityFrameworkStorage.Api
 {
     public class Startup
     {
@@ -16,7 +16,7 @@ namespace JavaScriptClient.Api
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
@@ -27,21 +27,8 @@ namespace JavaScriptClient.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                // this defines a CORS policy called "default"
-                // 适配 JS client
-                options.AddPolicy("default", policy =>
-                {
-                    policy.WithOrigins("http://localhost:5011", "http://localhost:5015")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod();
-                });
-            });
-
-            services.AddMvcCore()
-                .AddAuthorization()
-                .AddJsonFormatters();
+            // Add framework services.
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,17 +36,6 @@ namespace JavaScriptClient.Api
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
-            // this uses the policy called "default"
-            app.UseCors("default");
-
-            app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions
-            {
-                Authority = "http://localhost:5000",
-                RequireHttpsMetadata = false,
-
-                ApiName = "api1"
-            });
 
             app.UseMvc();
         }
