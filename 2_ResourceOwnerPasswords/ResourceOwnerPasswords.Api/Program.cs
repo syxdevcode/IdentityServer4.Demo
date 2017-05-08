@@ -12,6 +12,8 @@ namespace ResourceOwnerPasswords.Api
     {
         public static void Main(string[] args)
         {
+            Console.Title = "ResourceOwnerPasswords.Api";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5003")

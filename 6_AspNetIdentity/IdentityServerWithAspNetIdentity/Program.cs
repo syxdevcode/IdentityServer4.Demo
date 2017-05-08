@@ -11,6 +11,8 @@ namespace IdentityServerWithAspNetIdentity
     {
         public static void Main(string[] args)
         {
+            Console.Title = "IdentityServerWithAspNetIdentity.Server";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5000")

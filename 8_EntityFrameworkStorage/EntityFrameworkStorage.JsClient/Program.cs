@@ -11,6 +11,8 @@ namespace EntityFrameworkStorage.JsClient
     {
         public static void Main(string[] args)
         {
+            Console.Title = "EntityFrameworkStorage.JsClient";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5015")

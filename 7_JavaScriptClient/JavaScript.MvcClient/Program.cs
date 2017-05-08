@@ -11,6 +11,8 @@ namespace JavaScript.MvcClient
     {
         public static void Main(string[] args)
         {
+            Console.Title = "JavaScript.MvcClient";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5012")

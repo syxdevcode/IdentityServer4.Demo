@@ -11,6 +11,8 @@ namespace EntityFrameworkStorage.Server
     {
         public static void Main(string[] args)
         {
+            Console.Title = "EntityFrameworkStorage.Server";
+
             var host = new WebHostBuilder()
                 .UseUrls("http://localhost:5000")
                 .UseKestrel()

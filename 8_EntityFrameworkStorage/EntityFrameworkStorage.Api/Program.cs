@@ -12,6 +12,8 @@ namespace EntityFrameworkStorage.Api
     {
         public static void Main(string[] args)
         {
+            Console.Title = "EntityFrameworkStorage.Api";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5014")

@@ -11,6 +11,8 @@ namespace EntityFrameworkStorage.MvcClient
     {
         public static void Main(string[] args)
         {
+            Console.Title = "EntityFrameworkStorage.MvcClient";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5016")

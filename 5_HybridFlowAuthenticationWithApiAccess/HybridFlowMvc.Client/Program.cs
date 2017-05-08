@@ -11,6 +11,8 @@ namespace HybridFlowMvc.Client
     {
         public static void Main(string[] args)
         {
+            Console.Title = "HybridFlowMvc.Client";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5007")

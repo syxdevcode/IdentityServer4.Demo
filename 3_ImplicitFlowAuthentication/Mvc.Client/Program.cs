@@ -11,6 +11,8 @@ namespace Mvc.Client
     {
         public static void Main(string[] args)
         {
+            Console.Title = "OpenIDConnect.Mvc.Client";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5006")

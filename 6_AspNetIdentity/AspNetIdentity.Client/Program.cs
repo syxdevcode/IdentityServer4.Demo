@@ -11,6 +11,8 @@ namespace AspNetIdentity.Client
     {
         public static void Main(string[] args)
         {
+            Console.Title = "AspNetIdentity.Client";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5010")

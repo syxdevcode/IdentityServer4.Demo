@@ -12,6 +12,8 @@ namespace OpenIDConnect.Api
     {
         public static void Main(string[] args)
         {
+            Console.Title = "OpenIDConnect.Api";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5005")

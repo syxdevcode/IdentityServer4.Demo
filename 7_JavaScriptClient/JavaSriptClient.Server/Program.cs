@@ -11,6 +11,8 @@ namespace JavaSriptClient.Server
     {
         public static void Main(string[] args)
         {
+            Console.Title = "JavaSriptClient.Server";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5000")

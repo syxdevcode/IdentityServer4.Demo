@@ -11,6 +11,8 @@ namespace JavaScript.Client
     {
         public static void Main(string[] args)
         {
+            Console.Title = "JavaScript.Client";
+
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseUrls("http://localhost:5011")
