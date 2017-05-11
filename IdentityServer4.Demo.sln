@@ -73,6 +73,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9_IdentityServer4.MongoDB",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer4.MongoDB.Server", "9_IdentityServer4.MongoDB\IdentityServer4.MongoDB.Server\IdentityServer4.MongoDB.Server.csproj", "{AFBC315E-8FF3-402F-8D27-0AD7F376EB01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer4.MongoDB.Server1", "9_IdentityServer4.MongoDB\IdentityServer4.MongoDB.Server1\IdentityServer4.MongoDB.Server1.csproj", "{C11D57CE-7922-45D0-8689-5EDC92F2727A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer4.MongoDB", "9_IdentityServer4.MongoDB\IdentityServer4.MongoDB\IdentityServer4.MongoDB.csproj", "{5ED619A5-BB59-4A23-8F79-51FEE4B02101}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +187,14 @@ Global
 		{AFBC315E-8FF3-402F-8D27-0AD7F376EB01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFBC315E-8FF3-402F-8D27-0AD7F376EB01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFBC315E-8FF3-402F-8D27-0AD7F376EB01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C11D57CE-7922-45D0-8689-5EDC92F2727A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C11D57CE-7922-45D0-8689-5EDC92F2727A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C11D57CE-7922-45D0-8689-5EDC92F2727A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C11D57CE-7922-45D0-8689-5EDC92F2727A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED619A5-BB59-4A23-8F79-51FEE4B02101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED619A5-BB59-4A23-8F79-51FEE4B02101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED619A5-BB59-4A23-8F79-51FEE4B02101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED619A5-BB59-4A23-8F79-51FEE4B02101}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -215,5 +227,7 @@ Global
 		{92AE7D41-BC7F-4117-9F84-F59AEC0191F8} = {9D076A8E-21F3-4355-91D0-3C4E07D967F3}
 		{86290E7C-482B-45C9-A741-012A95274890} = {9D076A8E-21F3-4355-91D0-3C4E07D967F3}
 		{AFBC315E-8FF3-402F-8D27-0AD7F376EB01} = {66525EEA-6DA3-4A47-B483-C155377846BD}
+		{C11D57CE-7922-45D0-8689-5EDC92F2727A} = {66525EEA-6DA3-4A47-B483-C155377846BD}
+		{5ED619A5-BB59-4A23-8F79-51FEE4B02101} = {66525EEA-6DA3-4A47-B483-C155377846BD}
 	EndGlobalSection
 EndGlobal

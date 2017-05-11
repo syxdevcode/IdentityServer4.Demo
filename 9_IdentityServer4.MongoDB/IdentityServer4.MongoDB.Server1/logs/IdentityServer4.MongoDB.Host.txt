@@ -1,0 +1,4 @@
+2017-05-11 16:20:15.004 +08:00 [Debug] Using built-in CookieAuthentication middleware with scheme: "idsrv"
+2017-05-11 16:20:15.052 +08:00 [Debug] Adding CookieAuthentication middleware for external authentication with scheme: "idsrv.external"
+2017-05-11 16:20:15.573 +08:00 [Debug] Starting token cleanup
+2017-05-11 16:20:21.202 +08:00 [Verbose] No endpoint entry found for request path: "/"
