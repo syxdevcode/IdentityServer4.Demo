@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
@@ -7,6 +8,8 @@ namespace IdentityServer4.MongoDB.Entities
 {
     public class MongoDBUser
     {
+        public ObjectId Id { get; set; }
+
         /// <summary>
         ///  Gets or sets the subject identifier.
         /// </summary>

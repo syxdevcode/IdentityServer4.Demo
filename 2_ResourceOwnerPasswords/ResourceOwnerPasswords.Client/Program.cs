@@ -13,7 +13,7 @@ namespace ResourceOwnerPasswords.Client
         private static async Task MainAsync()
         {
             // discover endpoints from metadata
-            var disco = await DiscoveryClient.GetAsync("http://localhost:5002");
+            var disco = await DiscoveryClient.GetAsync("http://localhost:5000");
 
             // request token
             var tokenClient = new TokenClient(disco.TokenEndpoint, "ro.client", "secret");
@@ -32,7 +32,7 @@ namespace ResourceOwnerPasswords.Client
             var client = new HttpClient();
             client.SetBearerToken(tokenResponse.AccessToken);
 
-            var response = await client.GetAsync("http://localhost:5003/api/identity");
+            var response = await client.GetAsync("http://localhost:5001/api/identity");
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine(response.StatusCode);

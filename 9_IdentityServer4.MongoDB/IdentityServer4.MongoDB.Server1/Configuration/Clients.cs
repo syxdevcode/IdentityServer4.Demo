@@ -66,7 +66,7 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
                 //////////////////////////////////////////
                 new Client
                 {
-                    ClientId = "roclient",
+                    ClientId = "ro.client",
                     ClientSecrets =
                     {
                         new Secret("secret".Sha256())
@@ -79,7 +79,7 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         "custom.profile",
-                        "api1", "api2.read_only"
+                        "api1", "api2.read_only","api2"
                     }
                 },
 
@@ -155,7 +155,7 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
 
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
-
+                    ClientSecrets = { new Secret("secret".Sha256()) },
                     RedirectUris =  { "http://localhost:5012/signin-oidc" },
                     LogoutUri = "http://localhost:5012/signout-oidc",
                     PostLogoutRedirectUris = { "http://localhost:5012/signout-callback-oidc" },
@@ -192,7 +192,7 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
                 //////////////////////////////////////////
                 new Client
                 {
-                    ClientId = "mvc.hybrid",
+                    ClientId = "mvc",
                     ClientName = "MVC Hybrid",
                     ClientUri = "http://identityserver.io",
 
