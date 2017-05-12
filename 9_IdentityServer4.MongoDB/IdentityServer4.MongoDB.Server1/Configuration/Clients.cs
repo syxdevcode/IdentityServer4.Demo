@@ -114,7 +114,7 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
                     AllowedGrantTypes = GrantTypes.Hybrid,
                     RequirePkce = true,
 
-                    RedirectUris = { "http://127.0.0.1:7890/" },
+                    RedirectUris = { "http://localhost:5013/" },
 
                     AllowOfflineAccess = true,
 
@@ -149,16 +149,16 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
                 //////////////////////////////////////////
                 new Client
                 {
-                    ClientId = "mvc.implicit",
+                    ClientId = "mvc",
                     ClientName = "MVC Implicit",
-                    ClientUri = "http://identityserver.io",
+                    //ClientUri = "http://identityserver.io",
 
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
 
-                    RedirectUris =  { "http://localhost:44077/signin-oidc" },
-                    LogoutUri = "http://localhost:44077/signout-oidc",
-                    PostLogoutRedirectUris = { "http://localhost:44077/signout-callback-oidc" },
+                    RedirectUris =  { "http://localhost:5012/signin-oidc" },
+                    LogoutUri = "http://localhost:5012/signout-oidc",
+                    PostLogoutRedirectUris = { "http://localhost:5012/signout-callback-oidc" },
 
                     AllowedScopes =
                     {
@@ -168,7 +168,7 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
                         "api1", "api2.read_only"
                     },
                 },
-
+                /*
                 ///////////////////////////////////////////
                 // MVC Manual Implicit Flow Sample
                 //////////////////////////////////////////
@@ -176,7 +176,7 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
                 {
                     ClientId = "mvc.manual",
                     ClientName = "MVC Manual",
-                    ClientUri = "http://identityserver.io",
+                    //ClientUri = "http://identityserver.io",
 
                     AllowedGrantTypes = GrantTypes.Implicit,
 
@@ -186,7 +186,7 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
 
                     AllowedScopes = { IdentityServerConstants.StandardScopes.OpenId },
                 },
-
+                */
                 ///////////////////////////////////////////
                 // MVC Hybrid Flow Samples
                 //////////////////////////////////////////
@@ -204,9 +204,9 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
                     AllowedGrantTypes = GrantTypes.Hybrid,
                     AllowAccessTokensViaBrowser = false,
 
-                    RedirectUris = { "http://localhost:21402/signin-oidc" },
-                    LogoutUri = "http://localhost:21402/signout-oidc",
-                    PostLogoutRedirectUris = { "http://localhost:21402/signout-callback-oidc" },
+                    RedirectUris = { "http://localhost:5006/signin-oidc" },
+                    LogoutUri = "http://localhost:5006/signout-oidc",
+                    PostLogoutRedirectUris = { "http://localhost:5006/signout-callback-oidc" },
 
                     AllowOfflineAccess = true,
 
@@ -226,12 +226,12 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
                 {
                     ClientId = "js_oauth",
                     ClientName = "JavaScript OAuth 2.0 Client",
-                    ClientUri = "http://identityserver.io",
+                    //ClientUri = "http://identityserver.io",
 
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
 
-                    RedirectUris = { "http://localhost:28895/index.html" },
+                    RedirectUris = { "http://localhost:5015/index.html" },
                     AllowedScopes = { "api1", "api2.read_only" },
                 },
                 
@@ -242,7 +242,7 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
                 {
                     ClientId = "js_oidc",
                     ClientName = "JavaScript OIDC Client",
-                    ClientUri = "http://identityserver.io",
+                    //ClientUri = "http://identityserver.io",
 
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowAccessTokensViaBrowser = true,
@@ -251,14 +251,14 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
 
                     RedirectUris =
                     {
-                        "http://localhost:7017/index.html",
-                        "http://localhost:7017/callback.html",
-                        "http://localhost:7017/silent.html",
-                        "http://localhost:7017/popup.html",
+                        "http://localhost:5011/index.html",
+                        "http://localhost:5011/callback.html",
+                        "http://localhost:5011/silent.html",
+                        "http://localhost:5011/popup.html",
                     },
 
-                    PostLogoutRedirectUris = { "http://localhost:7017/index.html" },
-                    AllowedCorsOrigins = { "http://localhost:7017" },
+                    PostLogoutRedirectUris = { "http://localhost:5011/index.html" },
+                    AllowedCorsOrigins = { "http://localhost:5011" },
 
                     AllowedScopes =
                     {

@@ -12,13 +12,19 @@ namespace IdentityServer4.MongoDB.Interfaces
     public interface IConfigurationDbContext : IDisposable
     {
         IQueryable<Client> Clients { get; }
+
         IQueryable<IdentityResource> IdentityResources { get; }
+
         IQueryable<ApiResource> ApiResources { get; }
+
+        IQueryable<MongoDBUser> MongoDBUsers { get; }
 
         Task AddClient(Client entity);
 
         Task AddIdentityResource(IdentityResource entity);
 
         Task AddApiResource(ApiResource entity);
+
+        Task AddMongoDBUser(MongoDBUser entity);
     }
 }

@@ -15,6 +15,14 @@ using IdentityServer4.MongoDB.Interfaces;
 using IdentityServer4.MongoDB.Server1.Configuration;
 using IdentityServer4.MongoDB.Mappers;
 using System.IO;
+using IdentityServer4.MongoDB.Services;
+using IdentityServer4.MongoDB.Validate;
+using IdentityServer4.Services;
+using IdentityServer4.MongoDB.Repository;
+using System.IdentityModel.Tokens.Jwt;
+using IdentityServer4.AccessTokenValidation;
+using Microsoft.AspNetCore.Identity;
+using IdentityServer4.MongoDB.Entities;
 
 namespace IdentityServer4.MongoDB.Server1
 {
@@ -37,20 +45,30 @@ namespace IdentityServer4.MongoDB.Server1
         {
             services.AddMvc();
 
+            //my user repository
+            services.AddTransient<IPasswordHasher<MongoDBUser>, PasswordHasher<MongoDBUser>>();
+            services.AddScoped<IRepository, MongoDbRepository>();
+
             services.AddIdentityServer()
                 .AddTemporarySigningCredential()
-                .AddTestUsers(TestUsers.Users)
 
                 .AddSecretParser<ClientAssertionSecretParser>()
                 .AddSecretValidator<PrivateKeyJwtSecretValidator>()
 
+                .AddProfileService<ProfileService>()
+
                 .AddConfigurationStore(Configuration.GetSection("MongoDB"))
                 .AddOperationalStore(Configuration.GetSection("MongoDB"));
+            
+            services.AddTransient<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
+            services.AddTransient<IProfileService, ProfileService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime applicationLifetime, ILoggerFactory loggerFactory)
         {
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+
             // serilog filter
             Func<LogEvent, bool> serilogFilter = (e) =>
             {
@@ -81,6 +99,24 @@ namespace IdentityServer4.MongoDB.Server1
             app.UseIdentityServer();
             app.UseIdentityServerMongoDBTokenCleanup(applicationLifetime);
 
+            IdentityServerAuthenticationOptions identityServerValidationOptions = new IdentityServerAuthenticationOptions
+            {
+                //move host url into appsettings.json
+                Authority = "http://localhost:5000/",
+                ApiSecret = "secret",
+                ApiName = "my.api.resource",
+                AutomaticAuthenticate = true,
+                SupportedTokens = SupportedTokens.Both,
+
+                // required if you want to return a 403 and not a 401 for forbidden responses
+                AutomaticChallenge = true,
+
+                //change this to true for SLL
+                RequireHttpsMetadata = false
+            };
+
+            app.UseIdentityServerAuthentication(identityServerValidationOptions);
+
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
         }
@@ -108,6 +144,14 @@ namespace IdentityServer4.MongoDB.Server1
                 foreach (var resource in Resources.GetApiResources().ToList())
                 {
                     context.AddApiResource(resource.ToEntity());
+                }
+            }
+
+            if (!context.MongoDBUsers.Any())
+            {
+                foreach (var resource in TestUsers.Users)
+                {
+                    context.AddMongoDBUser(resource.ToEntity());
                 }
             }
         }

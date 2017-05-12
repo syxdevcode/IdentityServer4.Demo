@@ -17,6 +17,7 @@ namespace IdentityServer4.MongoDB.DbContexts
         private IMongoCollection<Client> _clients;
         private IMongoCollection<IdentityResource> _identityResources;
         private IMongoCollection<ApiResource> _apiResources;
+        private IMongoCollection<MongoDBUser> _mongoDBUser;
 
         public ConfigurationDbContext(IOptions<MongoDBConfiguration> settings)
             : base(settings)
@@ -24,6 +25,7 @@ namespace IdentityServer4.MongoDB.DbContexts
             _clients = Database.GetCollection<Client>(Constants.TableNames.Client);
             _identityResources = Database.GetCollection<IdentityResource>(Constants.TableNames.IdentityResource);
             _apiResources = Database.GetCollection<ApiResource>(Constants.TableNames.ApiResource);
+            _mongoDBUser = Database.GetCollection<MongoDBUser>(Constants.TableNames.MongoDBUsers);
         }
 
         public IQueryable<Client> Clients
@@ -39,6 +41,11 @@ namespace IdentityServer4.MongoDB.DbContexts
         {
             get { return _apiResources.AsQueryable(); }
         }
+        
+        public IQueryable<MongoDBUser> MongoDBUsers
+        {
+            get { return _mongoDBUser.AsQueryable(); }
+        }
 
         public async Task AddClient(Client entity)
         {
@@ -53,6 +60,10 @@ namespace IdentityServer4.MongoDB.DbContexts
         public async Task AddApiResource(ApiResource entity)
         {
             await _apiResources.InsertOneAsync(entity);
+        }
+        public async Task AddMongoDBUser(MongoDBUser entity)
+        {
+            await _mongoDBUser.InsertOneAsync(entity);
         }
 
     }
