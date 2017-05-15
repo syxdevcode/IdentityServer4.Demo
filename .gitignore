@@ -262,3 +262,7 @@ __pycache__/
 /7_JavaScriptClient/JavaSriptClient.Server/wwwroot/lib
 /8_EntityFrameworkStorage/EntityFrameworkStorage.Server/wwwroot/lib
 /8_EntityFrameworkStorage/EntityFrameworkStorage.MvcClient/wwwroot/lib
+/9_IdentityServer4.MongoDB/IdentityServer4.MongoDB.Server1/wwwroot/lib
+/9_IdentityServer4.MongoDB/IdentityServer4.MongoDB.Server1/wwwroot/lib
+/9_IdentityServer4.MongoDB/IdentityServer4.MongoDB.Server1/wwwroot/lib
+/9_IdentityServer4.MongoDB/IdentityServer4.MongoDB.Server1/wwwroot/lib
