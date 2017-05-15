@@ -1994,3 +1994,599 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
 2017-05-12 16:49:39.373 +08:00 [Debug] Clearing 0 tokens
 2017-05-12 16:50:39.383 +08:00 [Verbose] Querying for tokens to clear
 2017-05-12 16:50:39.389 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:30:14.803 +08:00 [Debug] Using built-in CookieAuthentication middleware with scheme: "idsrv"
+2017-05-15 08:30:14.866 +08:00 [Debug] Adding CookieAuthentication middleware for external authentication with scheme: "idsrv.external"
+2017-05-15 08:30:15.179 +08:00 [Debug] Starting token cleanup
+2017-05-15 08:30:44.218 +08:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type Discovery
+2017-05-15 08:30:44.223 +08:00 [Debug] Mapping found for endpoint: Discovery, creating handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-05-15 08:30:44.236 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-05-15 08:30:44.246 +08:00 [Verbose] Processing discovery request.
+2017-05-15 08:30:44.252 +08:00 [Debug] Start discovery request
+2017-05-15 08:30:44.443 +08:00 [Debug] Found ["openid", "profile", "email", "custom.profile", "api1", "api2.full_access", "api2.read_only"] as all scopes in database
+2017-05-15 08:30:44.465 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.DiscoveryDocumentResult"
+2017-05-15 08:30:45.026 +08:00 [Debug] Request path "/.well-known/openid-configuration/jwks" matched to endpoint type Discovery
+2017-05-15 08:30:45.028 +08:00 [Debug] Mapping found for endpoint: Discovery, creating handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-05-15 08:30:45.031 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration/jwks"
+2017-05-15 08:30:45.034 +08:00 [Verbose] Processing discovery request.
+2017-05-15 08:30:45.043 +08:00 [Debug] Start key discovery request
+2017-05-15 08:30:45.251 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.JsonWebKeysResult"
+2017-05-15 08:30:45.479 +08:00 [Debug] Request path "/connect/authorize" matched to endpoint type Authorize
+2017-05-15 08:30:45.483 +08:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-05-15 08:30:45.494 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-05-15 08:30:45.505 +08:00 [Debug] Start authorize request
+2017-05-15 08:30:45.540 +08:00 [Debug] No user present in authorize request
+2017-05-15 08:30:45.548 +08:00 [Debug] Start authorize request protocol validation
+2017-05-15 08:30:45.762 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:30:45.783 +08:00 [Error] Invalid redirect_uri: http://localhost:5012/signin-oidc
+"{
+  \"ClientId\": \"mvc\",
+  \"ClientName\": \"MVC Hybrid\",
+  \"RedirectUri\": \"http://localhost:5012/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:5006/signin-oidc\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"RequestedScopes\": \"\",
+  \"Raw\": {
+    \"client_id\": \"mvc\",
+    \"redirect_uri\": \"http://localhost:5012/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile api1 offline_access\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636304050453535531.ZTJjMGUyOTctZGZmMS00NzhmLWE4ZGEtYWJiOTA1MGY3ZmJiOWZhOGQzZTMtN2M3Zi00OGE2LTlmZDgtZTE0YzZiYjNlMmU2\",
+    \"state\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlKchXiJ3P5Uh_YWJpvOc6jiLibMFJskyRzwOYFbRVmZwya5QaSq8F8zO9o6-OC-d5j_5EHghmO_KZUd1rEcxKZ80TMF8i5eqgh_tP6x_TmUZZnP0G4tLmfKQTf7CkYtCXjJ7Z4JG4Tmy7pte3iNBqSSYJoyTN5a_Sfbzeg3GJ0cCmvXJyUS5VGeOqIbrH28iawY5G0N_hlgoCq3N1GmxdXFCm1QjBx1kciDWIIOob-sihPaAEBWUDdMjLanMKHTVblCjnNzNj71osJoU524laPEVtEOmx1goizQ3x8Bpdd80F4aHI3SUyobPp8f6cDg74Q\"
+  }
+}"
+2017-05-15 08:30:45.792 +08:00 [Error] Request validation failed
+2017-05-15 08:30:45.796 +08:00 [Information] "{
+  \"ClientId\": \"mvc\",
+  \"ClientName\": \"MVC Hybrid\",
+  \"RedirectUri\": \"http://localhost:5012/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:5006/signin-oidc\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"RequestedScopes\": \"\",
+  \"Raw\": {
+    \"client_id\": \"mvc\",
+    \"redirect_uri\": \"http://localhost:5012/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile api1 offline_access\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636304050453535531.ZTJjMGUyOTctZGZmMS00NzhmLWE4ZGEtYWJiOTA1MGY3ZmJiOWZhOGQzZTMtN2M3Zi00OGE2LTlmZDgtZTE0YzZiYjNlMmU2\",
+    \"state\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlKchXiJ3P5Uh_YWJpvOc6jiLibMFJskyRzwOYFbRVmZwya5QaSq8F8zO9o6-OC-d5j_5EHghmO_KZUd1rEcxKZ80TMF8i5eqgh_tP6x_TmUZZnP0G4tLmfKQTf7CkYtCXjJ7Z4JG4Tmy7pte3iNBqSSYJoyTN5a_Sfbzeg3GJ0cCmvXJyUS5VGeOqIbrH28iawY5G0N_hlgoCq3N1GmxdXFCm1QjBx1kciDWIIOob-sihPaAEBWUDdMjLanMKHTVblCjnNzNj71osJoU524laPEVtEOmx1goizQ3x8Bpdd80F4aHI3SUyobPp8f6cDg74Q\"
+  }
+}"
+2017-05-15 08:30:45.808 +08:00 [Verbose] End authorize request. result type: "IdentityServer4.Endpoints.Results.AuthorizeResult"
+2017-05-15 08:30:45.811 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.AuthorizeResult"
+2017-05-15 08:30:45.850 +08:00 [Verbose] Protecting message: "{\"Id\":\"a70212557e765a75033fec55c4cb2a53\",\"Created\":636304050458258939,\"Data\":{\"Error\":\"unauthorized_client\",\"RequestId\":\"0HL4R56FQKPCU\"}}"
+2017-05-15 08:30:46.004 +08:00 [Verbose] No endpoint entry found for request path: "/home/error"
+2017-05-15 08:30:46.017 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:30:46.726 +08:00 [Verbose] Error context loaded
+2017-05-15 08:30:49.749 +08:00 [Verbose] No endpoint entry found for request path: "/lib/bootstrap/css/bootstrap.css"
+2017-05-15 08:30:49.749 +08:00 [Verbose] No endpoint entry found for request path: "/css/site.css"
+2017-05-15 08:30:49.754 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:30:49.755 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:30:49.774 +08:00 [Verbose] No endpoint entry found for request path: "/lib/jquery/jquery.js"
+2017-05-15 08:30:49.777 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:30:49.813 +08:00 [Verbose] No endpoint entry found for request path: "/lib/bootstrap/js/bootstrap.js"
+2017-05-15 08:30:49.814 +08:00 [Verbose] No endpoint entry found for request path: "/icon.png"
+2017-05-15 08:30:49.817 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:30:49.826 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:31:15.196 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:31:15.230 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:32:15.244 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:32:54.830 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:32:55.273 +08:00 [Debug] Stopping token cleanup
+2017-05-15 08:32:55.275 +08:00 [Debug] Task.Delay exception. exiting.
+2017-05-15 08:33:08.847 +08:00 [Debug] Using built-in CookieAuthentication middleware with scheme: "idsrv"
+2017-05-15 08:33:08.883 +08:00 [Debug] Adding CookieAuthentication middleware for external authentication with scheme: "idsrv.external"
+2017-05-15 08:33:09.207 +08:00 [Debug] Starting token cleanup
+2017-05-15 08:33:13.725 +08:00 [Debug] Request path "/connect/authorize" matched to endpoint type Authorize
+2017-05-15 08:33:13.732 +08:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-05-15 08:33:13.753 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-05-15 08:33:13.766 +08:00 [Debug] Start authorize request
+2017-05-15 08:33:13.792 +08:00 [Debug] No user present in authorize request
+2017-05-15 08:33:13.798 +08:00 [Debug] Start authorize request protocol validation
+2017-05-15 08:33:13.959 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:14.059 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:14.169 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:14.188 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:14.197 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:14.209 +08:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-05-15 08:33:14.214 +08:00 [Verbose] Authorize request protocol validation successful
+2017-05-15 08:33:14.430 +08:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"mvc\",
+  \"ClientName\": \"MVC Client\",
+  \"RedirectUri\": \"http://localhost:5012/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:5012/signin-oidc\"
+  ],
+  \"SubjectId\": \"anonymous\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile api1 offline_access\",
+  \"State\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlL4podTIvggAbrVH_UUUf7s5Sj6Q7h0O5RD-VGGwSuos8mKxVIiGdTrDVNYLlJQdC6GJdlwaLC5RQfO2nc7I9bDwmi6CWLNews6vopCWcjXz7gOzKK3GTXyTLsKq1GgStOvWWEaVRNGqAwAF3mjUZDVqhDqvtZAXVUSqUzMDzYFk5bKA4E9ZivHy7Qsh4Evc-S8TrXCVQH7D52HS-50R3EPJ05v8t23G0B_77DrZhfbSFVN01G77l77rCTJiPcvo_WGFyj7ScPd0XQlHy3e_PQvVONh7ItGJAxBtvPrrqe4CJcmaU3NZ3a8y63i1VHr7fQ\",
+  \"Nonce\": \"636304051934572907.NTVlM2ZlYTUtYmQ1NC00OGY4LThiNjMtMDBmNWFjZjVjZjMzMDEzMDMzZTEtMzc4Yy00ZGM4LWFlY2QtZWVmYmVhYTkwYzA4\",
+  \"Raw\": {
+    \"client_id\": \"mvc\",
+    \"redirect_uri\": \"http://localhost:5012/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile api1 offline_access\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636304051934572907.NTVlM2ZlYTUtYmQ1NC00OGY4LThiNjMtMDBmNWFjZjVjZjMzMDEzMDMzZTEtMzc4Yy00ZGM4LWFlY2QtZWVmYmVhYTkwYzA4\",
+    \"state\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlL4podTIvggAbrVH_UUUf7s5Sj6Q7h0O5RD-VGGwSuos8mKxVIiGdTrDVNYLlJQdC6GJdlwaLC5RQfO2nc7I9bDwmi6CWLNews6vopCWcjXz7gOzKK3GTXyTLsKq1GgStOvWWEaVRNGqAwAF3mjUZDVqhDqvtZAXVUSqUzMDzYFk5bKA4E9ZivHy7Qsh4Evc-S8TrXCVQH7D52HS-50R3EPJ05v8t23G0B_77DrZhfbSFVN01G77l77rCTJiPcvo_WGFyj7ScPd0XQlHy3e_PQvVONh7ItGJAxBtvPrrqe4CJcmaU3NZ3a8y63i1VHr7fQ\"
+  }
+}"
+2017-05-15 08:33:14.439 +08:00 [Verbose] ProcessInteractionAsync
+2017-05-15 08:33:14.449 +08:00 [Information] Showing login: User is not authenticated
+2017-05-15 08:33:14.457 +08:00 [Verbose] End authorize request. result type: "IdentityServer4.Endpoints.Results.LoginPageResult"
+2017-05-15 08:33:14.464 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.LoginPageResult"
+2017-05-15 08:33:14.572 +08:00 [Verbose] No endpoint entry found for request path: "/account/login"
+2017-05-15 08:33:14.585 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:33:15.050 +08:00 [Verbose] returnUrl is valid
+2017-05-15 08:33:15.058 +08:00 [Verbose] returnUrl is valid
+2017-05-15 08:33:15.067 +08:00 [Debug] Start authorize request protocol validation
+2017-05-15 08:33:15.074 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:15.081 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:15.087 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:15.094 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:15.101 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:15.105 +08:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-05-15 08:33:15.109 +08:00 [Verbose] Authorize request protocol validation successful
+2017-05-15 08:33:15.112 +08:00 [Verbose] AuthorizationRequest being returned
+2017-05-15 08:33:15.116 +08:00 [Verbose] AuthorizationRequest being returned
+2017-05-15 08:33:15.125 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:24.931 +08:00 [Verbose] No endpoint entry found for request path: "/account/login"
+2017-05-15 08:33:24.935 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:33:25.062 +08:00 [Debug] Augmenting SignInContext
+2017-05-15 08:33:25.112 +08:00 [Verbose] returnUrl is valid
+2017-05-15 08:33:25.116 +08:00 [Verbose] IsValidReturnUrl true
+2017-05-15 08:33:25.140 +08:00 [Debug] Request path "/connect/authorize/login" matched to endpoint type Authorize
+2017-05-15 08:33:25.144 +08:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-05-15 08:33:25.148 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize/login"
+2017-05-15 08:33:25.156 +08:00 [Debug] Start authorize request (after login)
+2017-05-15 08:33:25.158 +08:00 [Debug] User in authorize request: "88421113"
+2017-05-15 08:33:25.162 +08:00 [Debug] Start authorize request protocol validation
+2017-05-15 08:33:25.168 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:25.175 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:25.183 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:25.188 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:25.194 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:25.197 +08:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-05-15 08:33:25.199 +08:00 [Verbose] Authorize request protocol validation successful
+2017-05-15 08:33:25.202 +08:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"mvc\",
+  \"ClientName\": \"MVC Client\",
+  \"RedirectUri\": \"http://localhost:5012/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:5012/signin-oidc\"
+  ],
+  \"SubjectId\": \"88421113\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile api1 offline_access\",
+  \"State\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlL4podTIvggAbrVH_UUUf7s5Sj6Q7h0O5RD-VGGwSuos8mKxVIiGdTrDVNYLlJQdC6GJdlwaLC5RQfO2nc7I9bDwmi6CWLNews6vopCWcjXz7gOzKK3GTXyTLsKq1GgStOvWWEaVRNGqAwAF3mjUZDVqhDqvtZAXVUSqUzMDzYFk5bKA4E9ZivHy7Qsh4Evc-S8TrXCVQH7D52HS-50R3EPJ05v8t23G0B_77DrZhfbSFVN01G77l77rCTJiPcvo_WGFyj7ScPd0XQlHy3e_PQvVONh7ItGJAxBtvPrrqe4CJcmaU3NZ3a8y63i1VHr7fQ\",
+  \"Nonce\": \"636304051934572907.NTVlM2ZlYTUtYmQ1NC00OGY4LThiNjMtMDBmNWFjZjVjZjMzMDEzMDMzZTEtMzc4Yy00ZGM4LWFlY2QtZWVmYmVhYTkwYzA4\",
+  \"SessionId\": \"9d35997268b4a6ec165cda8005afa57b\",
+  \"Raw\": {
+    \"client_id\": \"mvc\",
+    \"redirect_uri\": \"http://localhost:5012/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile api1 offline_access\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636304051934572907.NTVlM2ZlYTUtYmQ1NC00OGY4LThiNjMtMDBmNWFjZjVjZjMzMDEzMDMzZTEtMzc4Yy00ZGM4LWFlY2QtZWVmYmVhYTkwYzA4\",
+    \"state\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlL4podTIvggAbrVH_UUUf7s5Sj6Q7h0O5RD-VGGwSuos8mKxVIiGdTrDVNYLlJQdC6GJdlwaLC5RQfO2nc7I9bDwmi6CWLNews6vopCWcjXz7gOzKK3GTXyTLsKq1GgStOvWWEaVRNGqAwAF3mjUZDVqhDqvtZAXVUSqUzMDzYFk5bKA4E9ZivHy7Qsh4Evc-S8TrXCVQH7D52HS-50R3EPJ05v8t23G0B_77DrZhfbSFVN01G77l77rCTJiPcvo_WGFyj7ScPd0XQlHy3e_PQvVONh7ItGJAxBtvPrrqe4CJcmaU3NZ3a8y63i1VHr7fQ\"
+  }
+}"
+2017-05-15 08:33:25.206 +08:00 [Verbose] ProcessInteractionAsync
+2017-05-15 08:33:25.220 +08:00 [Information] Showing consent: User has not yet consented
+2017-05-15 08:33:25.224 +08:00 [Verbose] End Authorize Request. Result type: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-05-15 08:33:25.226 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-05-15 08:33:25.238 +08:00 [Verbose] No endpoint entry found for request path: "/consent"
+2017-05-15 08:33:25.243 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:33:25.254 +08:00 [Verbose] returnUrl is valid
+2017-05-15 08:33:25.257 +08:00 [Verbose] returnUrl is valid
+2017-05-15 08:33:25.262 +08:00 [Debug] Start authorize request protocol validation
+2017-05-15 08:33:25.268 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:25.274 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:25.280 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:25.286 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:25.294 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:25.299 +08:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-05-15 08:33:25.301 +08:00 [Verbose] Authorize request protocol validation successful
+2017-05-15 08:33:25.303 +08:00 [Verbose] AuthorizationRequest being returned
+2017-05-15 08:33:25.305 +08:00 [Verbose] AuthorizationRequest being returned
+2017-05-15 08:33:25.312 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:25.318 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:25.326 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:25.614 +08:00 [Verbose] No endpoint entry found for request path: "/lib/bootstrap/fonts/glyphicons-halflings-regular.woff2"
+2017-05-15 08:33:25.616 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:33:27.910 +08:00 [Verbose] No endpoint entry found for request path: "/consent"
+2017-05-15 08:33:27.917 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:33:27.985 +08:00 [Verbose] returnUrl is valid
+2017-05-15 08:33:27.990 +08:00 [Verbose] returnUrl is valid
+2017-05-15 08:33:27.997 +08:00 [Debug] Start authorize request protocol validation
+2017-05-15 08:33:28.004 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:28.012 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:28.020 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:28.027 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:28.066 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:28.068 +08:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-05-15 08:33:28.070 +08:00 [Verbose] Authorize request protocol validation successful
+2017-05-15 08:33:28.071 +08:00 [Verbose] AuthorizationRequest being returned
+2017-05-15 08:33:28.073 +08:00 [Verbose] AuthorizationRequest being returned
+2017-05-15 08:33:28.117 +08:00 [Verbose] Protecting message: "{\"Created\":636304052080850907,\"Data\":{\"Granted\":true,\"ScopesConsented\":[\"openid\",\"profile\",\"api1\",\"offline_access\"],\"RememberConsent\":true}}"
+2017-05-15 08:33:28.155 +08:00 [Debug] Request path "/connect/authorize/consent" matched to endpoint type Authorize
+2017-05-15 08:33:28.162 +08:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-05-15 08:33:28.165 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize/consent"
+2017-05-15 08:33:28.176 +08:00 [Debug] Start authorize request (after consent)
+2017-05-15 08:33:28.272 +08:00 [Debug] User in authorize request: "88421113"
+2017-05-15 08:33:28.277 +08:00 [Debug] Start authorize request protocol validation
+2017-05-15 08:33:28.282 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:28.288 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:28.297 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:28.302 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:28.310 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:28.313 +08:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-05-15 08:33:28.315 +08:00 [Verbose] Authorize request protocol validation successful
+2017-05-15 08:33:28.317 +08:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"mvc\",
+  \"ClientName\": \"MVC Client\",
+  \"RedirectUri\": \"http://localhost:5012/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:5012/signin-oidc\"
+  ],
+  \"SubjectId\": \"88421113\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile api1 offline_access\",
+  \"State\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlL4podTIvggAbrVH_UUUf7s5Sj6Q7h0O5RD-VGGwSuos8mKxVIiGdTrDVNYLlJQdC6GJdlwaLC5RQfO2nc7I9bDwmi6CWLNews6vopCWcjXz7gOzKK3GTXyTLsKq1GgStOvWWEaVRNGqAwAF3mjUZDVqhDqvtZAXVUSqUzMDzYFk5bKA4E9ZivHy7Qsh4Evc-S8TrXCVQH7D52HS-50R3EPJ05v8t23G0B_77DrZhfbSFVN01G77l77rCTJiPcvo_WGFyj7ScPd0XQlHy3e_PQvVONh7ItGJAxBtvPrrqe4CJcmaU3NZ3a8y63i1VHr7fQ\",
+  \"Nonce\": \"636304051934572907.NTVlM2ZlYTUtYmQ1NC00OGY4LThiNjMtMDBmNWFjZjVjZjMzMDEzMDMzZTEtMzc4Yy00ZGM4LWFlY2QtZWVmYmVhYTkwYzA4\",
+  \"SessionId\": \"9d35997268b4a6ec165cda8005afa57b\",
+  \"Raw\": {
+    \"client_id\": \"mvc\",
+    \"redirect_uri\": \"http://localhost:5012/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile api1 offline_access\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636304051934572907.NTVlM2ZlYTUtYmQ1NC00OGY4LThiNjMtMDBmNWFjZjVjZjMzMDEzMDMzZTEtMzc4Yy00ZGM4LWFlY2QtZWVmYmVhYTkwYzA4\",
+    \"state\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlL4podTIvggAbrVH_UUUf7s5Sj6Q7h0O5RD-VGGwSuos8mKxVIiGdTrDVNYLlJQdC6GJdlwaLC5RQfO2nc7I9bDwmi6CWLNews6vopCWcjXz7gOzKK3GTXyTLsKq1GgStOvWWEaVRNGqAwAF3mjUZDVqhDqvtZAXVUSqUzMDzYFk5bKA4E9ZivHy7Qsh4Evc-S8TrXCVQH7D52HS-50R3EPJ05v8t23G0B_77DrZhfbSFVN01G77l77rCTJiPcvo_WGFyj7ScPd0XQlHy3e_PQvVONh7ItGJAxBtvPrrqe4CJcmaU3NZ3a8y63i1VHr7fQ\"
+  }
+}"
+2017-05-15 08:33:28.326 +08:00 [Verbose] ProcessInteractionAsync
+2017-05-15 08:33:28.328 +08:00 [Verbose] Consent was shown to user
+2017-05-15 08:33:28.338 +08:00 [Information] User consented to scopes: ["openid", "profile", "api1", "offline_access"]
+2017-05-15 08:33:28.348 +08:00 [Debug] User indicated to remember consent for scopes: ["openid", "profile", "api1", "offline_access"]
+2017-05-15 08:33:28.395 +08:00 [Debug] "4oQP/gTljoLpi2qGeg6XngXKcPlqiS8QXw+qqyP+diM=" not found in database
+2017-05-15 08:33:28.450 +08:00 [Debug] Creating Hybrid Flow response.
+2017-05-15 08:33:28.489 +08:00 [Debug] "51+NTO3gMSsN1ASnDispMgzcLJI9TJzohs8JEY7CEns=" not found in database
+2017-05-15 08:33:28.498 +08:00 [Debug] Creating Implicit Flow response.
+2017-05-15 08:33:28.505 +08:00 [Verbose] Creating identity token
+2017-05-15 08:33:28.513 +08:00 [Debug] Getting claims for identity token for subject: "88421113" and client: "mvc"
+2017-05-15 08:33:28.516 +08:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-05-15 08:33:28.525 +08:00 [Verbose] Creating JWT identity token
+2017-05-15 08:33:28.727 +08:00 [Verbose] Identity token issued for "mvc (MVC Client)" / "88421113": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJkZGQ5ZTZlNDgxY2NkODBjNTU4NGUxNGViMWU3YzM3IiwidHlwIjoiSldUIn0.eyJuYmYiOjE0OTQ4MDg0MDgsImV4cCI6MTQ5NDgwODcwOCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoibXZjIiwibm9uY2UiOiI2MzYzMDQwNTE5MzQ1NzI5MDcuTlRWbE0yWmxZVFV0WW1RMU5DMDBPR1k0TFRoaU5qTXRNREJtTldGalpqVmpaak16TURFek1ETXpaVEV0TXpjNFl5MDBaR000TFdGbFkyUXRaV1ZtWW1WaFlUa3dZekE0IiwiaWF0IjoxNDk0ODA4NDA4LCJjX2hhc2giOiIzWmlPajJPMlNCRE03YjZ1MVNNcWxBIiwic2lkIjoiOWQzNTk5NzI2OGI0YTZlYzE2NWNkYTgwMDVhZmE1N2IiLCJzdWIiOiI4ODQyMTExMyIsImF1dGhfdGltZSI6MTQ5NDgwODQwNSwiaWRwIjoibG9jYWwiLCJhbXIiOlsicHdkIl19.ZaW6kiSU241_wlJoEi6m6JK1sbFWfu8xUn5202coa3eZ-ZI-nQX9ibfUoZ8dlwtL9J2EWaYksKNQWlKWeHu6GDX40djm3cvqnmuik2ndX4Ij1OLiahdEz3cFkUp9IYVzz0VIx5GW4v7xWWKclZ-1-I_uqzoWusFThZ2KOTmJz0AzWtRZ5S3HCO30AaeR65pFiEkH8RxqZQpvCytOKVbfCOJz1kPj-eWdDaSnlK0eB3JxKzQDOl4flda3f0MZIg_UK_AeAXeY29Jw4p8LGYrsp4qAzdxuEl1pSZwytSJCPEBAapLdSn5-5lmm0Ackf1y3ZMiXVG_0Vgc7-NmtswdHjA"
+2017-05-15 08:33:28.730 +08:00 [Verbose] Code issued for "mvc (MVC Client)" / "88421113": "8b413a3bab1e94bc6cd3fbbc6f4d277c50e69aeb96b214395365e28ae1798045"
+2017-05-15 08:33:28.746 +08:00 [Information] Authorize endpoint response
+"{
+  \"SubjectId\": \"88421113\",
+  \"ClientId\": \"mvc\",
+  \"RedirectUri\": \"http://localhost:5012/signin-oidc\",
+  \"State\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlL4podTIvggAbrVH_UUUf7s5Sj6Q7h0O5RD-VGGwSuos8mKxVIiGdTrDVNYLlJQdC6GJdlwaLC5RQfO2nc7I9bDwmi6CWLNews6vopCWcjXz7gOzKK3GTXyTLsKq1GgStOvWWEaVRNGqAwAF3mjUZDVqhDqvtZAXVUSqUzMDzYFk5bKA4E9ZivHy7Qsh4Evc-S8TrXCVQH7D52HS-50R3EPJ05v8t23G0B_77DrZhfbSFVN01G77l77rCTJiPcvo_WGFyj7ScPd0XQlHy3e_PQvVONh7ItGJAxBtvPrrqe4CJcmaU3NZ3a8y63i1VHr7fQ\",
+  \"Scope\": \"openid profile api1 offline_access\"
+}"
+2017-05-15 08:33:28.750 +08:00 [Verbose] End Authorize Request. Result type: "IdentityServer4.Endpoints.Results.AuthorizeResult"
+2017-05-15 08:33:28.755 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.AuthorizeResult"
+2017-05-15 08:33:28.781 +08:00 [Debug] Augmenting SignInContext
+2017-05-15 08:33:32.353 +08:00 [Debug] Request path "/.well-known/openid-configuration" matched to endpoint type Discovery
+2017-05-15 08:33:32.358 +08:00 [Debug] Mapping found for endpoint: Discovery, creating handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-05-15 08:33:32.367 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration"
+2017-05-15 08:33:32.371 +08:00 [Verbose] Processing discovery request.
+2017-05-15 08:33:32.379 +08:00 [Debug] Start discovery request
+2017-05-15 08:33:32.411 +08:00 [Debug] Found ["openid", "profile", "email", "custom.profile", "api1", "api2.full_access", "api2.read_only"] as all scopes in database
+2017-05-15 08:33:32.422 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.DiscoveryDocumentResult"
+2017-05-15 08:33:32.447 +08:00 [Debug] Request path "/.well-known/openid-configuration/jwks" matched to endpoint type Discovery
+2017-05-15 08:33:32.451 +08:00 [Debug] Mapping found for endpoint: Discovery, creating handler: "IdentityServer4.Endpoints.DiscoveryEndpoint"
+2017-05-15 08:33:32.453 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.DiscoveryEndpoint" for "/.well-known/openid-configuration/jwks"
+2017-05-15 08:33:32.462 +08:00 [Verbose] Processing discovery request.
+2017-05-15 08:33:32.466 +08:00 [Debug] Start key discovery request
+2017-05-15 08:33:32.478 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.JsonWebKeysResult"
+2017-05-15 08:33:32.499 +08:00 [Debug] Request path "/connect/authorize" matched to endpoint type Authorize
+2017-05-15 08:33:32.503 +08:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-05-15 08:33:32.506 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize"
+2017-05-15 08:33:32.512 +08:00 [Debug] Start authorize request
+2017-05-15 08:33:32.515 +08:00 [Debug] User in authorize request: "88421113"
+2017-05-15 08:33:32.517 +08:00 [Debug] Start authorize request protocol validation
+2017-05-15 08:33:32.522 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:32.530 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:32.537 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:32.545 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:32.552 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:32.556 +08:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-05-15 08:33:32.562 +08:00 [Verbose] Authorize request protocol validation successful
+2017-05-15 08:33:32.565 +08:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"mvc\",
+  \"ClientName\": \"MVC Client\",
+  \"RedirectUri\": \"http://localhost:5012/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:5012/signin-oidc\"
+  ],
+  \"SubjectId\": \"88421113\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile api1 offline_access\",
+  \"State\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlKHk5jvfEtBF_3gl_I8gqRUb_d5EsLNBmS-bqzqF9lZWuEJIE7LTOsXZ8PkZBlxfQ4aV_hbhXrt_BErumrAtU0RFPqCClYPUwR_PhstHX10ZUomGLZ3W_iyYTh1xcBBjMdlpxeQDIqZiJ3tQvvF2xBwSn7abQBA2WWL-cmhZZXfDMCUhMr-6Awz8bhVLfpLgeUK-FQyL90EE2IKTHRmDZatNzuC1DQONCthj4rEvgH7hmB1ER7EOQtWSQDcRbgKpZvOVoQqkgnJBkfqg1xVtuseLDdftI-_67cEyO8XpuWZimesah01-BvE4Yx5dV8trz4\",
+  \"Nonce\": \"636304052124922156.ZDUwNmVhMDgtZmRiNS00NWFmLWE1OWEtYWQ3OTNiYWM0YWIxZWFhYTZkMTEtNDg5OS00NDJmLWFlMTUtMzk2NDk0MTA2ZWJj\",
+  \"SessionId\": \"9d35997268b4a6ec165cda8005afa57b\",
+  \"Raw\": {
+    \"client_id\": \"mvc\",
+    \"redirect_uri\": \"http://localhost:5012/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile api1 offline_access\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636304052124922156.ZDUwNmVhMDgtZmRiNS00NWFmLWE1OWEtYWQ3OTNiYWM0YWIxZWFhYTZkMTEtNDg5OS00NDJmLWFlMTUtMzk2NDk0MTA2ZWJj\",
+    \"state\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlKHk5jvfEtBF_3gl_I8gqRUb_d5EsLNBmS-bqzqF9lZWuEJIE7LTOsXZ8PkZBlxfQ4aV_hbhXrt_BErumrAtU0RFPqCClYPUwR_PhstHX10ZUomGLZ3W_iyYTh1xcBBjMdlpxeQDIqZiJ3tQvvF2xBwSn7abQBA2WWL-cmhZZXfDMCUhMr-6Awz8bhVLfpLgeUK-FQyL90EE2IKTHRmDZatNzuC1DQONCthj4rEvgH7hmB1ER7EOQtWSQDcRbgKpZvOVoQqkgnJBkfqg1xVtuseLDdftI-_67cEyO8XpuWZimesah01-BvE4Yx5dV8trz4\"
+  }
+}"
+2017-05-15 08:33:32.571 +08:00 [Verbose] ProcessInteractionAsync
+2017-05-15 08:33:32.574 +08:00 [Information] Showing consent: User has not yet consented
+2017-05-15 08:33:32.578 +08:00 [Verbose] End authorize request. result type: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-05-15 08:33:32.582 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.ConsentPageResult"
+2017-05-15 08:33:32.588 +08:00 [Verbose] No endpoint entry found for request path: "/consent"
+2017-05-15 08:33:32.595 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:33:32.598 +08:00 [Verbose] returnUrl is valid
+2017-05-15 08:33:32.600 +08:00 [Verbose] returnUrl is valid
+2017-05-15 08:33:32.604 +08:00 [Debug] Start authorize request protocol validation
+2017-05-15 08:33:32.610 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:32.618 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:32.627 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:32.634 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:32.642 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:32.646 +08:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-05-15 08:33:32.650 +08:00 [Verbose] Authorize request protocol validation successful
+2017-05-15 08:33:32.653 +08:00 [Verbose] AuthorizationRequest being returned
+2017-05-15 08:33:32.656 +08:00 [Verbose] AuthorizationRequest being returned
+2017-05-15 08:33:32.662 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:32.668 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:32.676 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:33.820 +08:00 [Verbose] No endpoint entry found for request path: "/consent"
+2017-05-15 08:33:33.826 +08:00 [Information] "Bearer" was not authenticated. Failure message: "No token found."
+2017-05-15 08:33:33.830 +08:00 [Verbose] returnUrl is valid
+2017-05-15 08:33:33.834 +08:00 [Verbose] returnUrl is valid
+2017-05-15 08:33:33.837 +08:00 [Debug] Start authorize request protocol validation
+2017-05-15 08:33:33.845 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:33.852 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:33.859 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:33.865 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:33.872 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:33.877 +08:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-05-15 08:33:33.879 +08:00 [Verbose] Authorize request protocol validation successful
+2017-05-15 08:33:33.883 +08:00 [Verbose] AuthorizationRequest being returned
+2017-05-15 08:33:33.887 +08:00 [Verbose] AuthorizationRequest being returned
+2017-05-15 08:33:33.890 +08:00 [Verbose] Protecting message: "{\"Created\":636304052138904012,\"Data\":{\"Granted\":true,\"ScopesConsented\":[\"openid\",\"profile\",\"api1\",\"offline_access\"],\"RememberConsent\":true}}"
+2017-05-15 08:33:33.904 +08:00 [Debug] Request path "/connect/authorize/consent" matched to endpoint type Authorize
+2017-05-15 08:33:33.907 +08:00 [Debug] Mapping found for endpoint: Authorize, creating handler: "IdentityServer4.Endpoints.AuthorizeEndpoint"
+2017-05-15 08:33:33.910 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.AuthorizeEndpoint" for "/connect/authorize/consent"
+2017-05-15 08:33:33.912 +08:00 [Debug] Start authorize request (after consent)
+2017-05-15 08:33:33.915 +08:00 [Debug] User in authorize request: "88421113"
+2017-05-15 08:33:33.917 +08:00 [Debug] Start authorize request protocol validation
+2017-05-15 08:33:33.920 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:33.926 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:33.932 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:33.938 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:33.946 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:33.948 +08:00 [Debug] Calling into custom validator: "IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator"
+2017-05-15 08:33:33.950 +08:00 [Verbose] Authorize request protocol validation successful
+2017-05-15 08:33:33.954 +08:00 [Information] ValidatedAuthorizeRequest
+"{
+  \"ClientId\": \"mvc\",
+  \"ClientName\": \"MVC Client\",
+  \"RedirectUri\": \"http://localhost:5012/signin-oidc\",
+  \"AllowedRedirectUris\": [
+    \"http://localhost:5012/signin-oidc\"
+  ],
+  \"SubjectId\": \"88421113\",
+  \"ResponseType\": \"code id_token\",
+  \"ResponseMode\": \"form_post\",
+  \"GrantType\": \"hybrid\",
+  \"RequestedScopes\": \"openid profile api1 offline_access\",
+  \"State\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlKHk5jvfEtBF_3gl_I8gqRUb_d5EsLNBmS-bqzqF9lZWuEJIE7LTOsXZ8PkZBlxfQ4aV_hbhXrt_BErumrAtU0RFPqCClYPUwR_PhstHX10ZUomGLZ3W_iyYTh1xcBBjMdlpxeQDIqZiJ3tQvvF2xBwSn7abQBA2WWL-cmhZZXfDMCUhMr-6Awz8bhVLfpLgeUK-FQyL90EE2IKTHRmDZatNzuC1DQONCthj4rEvgH7hmB1ER7EOQtWSQDcRbgKpZvOVoQqkgnJBkfqg1xVtuseLDdftI-_67cEyO8XpuWZimesah01-BvE4Yx5dV8trz4\",
+  \"Nonce\": \"636304052124922156.ZDUwNmVhMDgtZmRiNS00NWFmLWE1OWEtYWQ3OTNiYWM0YWIxZWFhYTZkMTEtNDg5OS00NDJmLWFlMTUtMzk2NDk0MTA2ZWJj\",
+  \"SessionId\": \"9d35997268b4a6ec165cda8005afa57b\",
+  \"Raw\": {
+    \"client_id\": \"mvc\",
+    \"redirect_uri\": \"http://localhost:5012/signin-oidc\",
+    \"response_type\": \"code id_token\",
+    \"scope\": \"openid profile api1 offline_access\",
+    \"response_mode\": \"form_post\",
+    \"nonce\": \"636304052124922156.ZDUwNmVhMDgtZmRiNS00NWFmLWE1OWEtYWQ3OTNiYWM0YWIxZWFhYTZkMTEtNDg5OS00NDJmLWFlMTUtMzk2NDk0MTA2ZWJj\",
+    \"state\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlKHk5jvfEtBF_3gl_I8gqRUb_d5EsLNBmS-bqzqF9lZWuEJIE7LTOsXZ8PkZBlxfQ4aV_hbhXrt_BErumrAtU0RFPqCClYPUwR_PhstHX10ZUomGLZ3W_iyYTh1xcBBjMdlpxeQDIqZiJ3tQvvF2xBwSn7abQBA2WWL-cmhZZXfDMCUhMr-6Awz8bhVLfpLgeUK-FQyL90EE2IKTHRmDZatNzuC1DQONCthj4rEvgH7hmB1ER7EOQtWSQDcRbgKpZvOVoQqkgnJBkfqg1xVtuseLDdftI-_67cEyO8XpuWZimesah01-BvE4Yx5dV8trz4\"
+  }
+}"
+2017-05-15 08:33:33.959 +08:00 [Verbose] ProcessInteractionAsync
+2017-05-15 08:33:33.965 +08:00 [Verbose] Consent was shown to user
+2017-05-15 08:33:33.967 +08:00 [Information] User consented to scopes: ["openid", "profile", "api1", "offline_access"]
+2017-05-15 08:33:33.969 +08:00 [Debug] User indicated to remember consent for scopes: ["openid", "profile", "api1", "offline_access"]
+2017-05-15 08:33:33.992 +08:00 [Debug] "4oQP/gTljoLpi2qGeg6XngXKcPlqiS8QXw+qqyP+diM=" found in database
+2017-05-15 08:33:34.015 +08:00 [Debug] Creating Hybrid Flow response.
+2017-05-15 08:33:34.034 +08:00 [Debug] "JnYU/VXEMSIqOqAW5RrjjGMXIszfY40nNVJBPCGaeq4=" not found in database
+2017-05-15 08:33:34.038 +08:00 [Debug] Creating Implicit Flow response.
+2017-05-15 08:33:34.040 +08:00 [Verbose] Creating identity token
+2017-05-15 08:33:34.045 +08:00 [Debug] Getting claims for identity token for subject: "88421113" and client: "mvc"
+2017-05-15 08:33:34.047 +08:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-05-15 08:33:34.049 +08:00 [Verbose] Creating JWT identity token
+2017-05-15 08:33:34.053 +08:00 [Verbose] Identity token issued for "mvc (MVC Client)" / "88421113": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJkZGQ5ZTZlNDgxY2NkODBjNTU4NGUxNGViMWU3YzM3IiwidHlwIjoiSldUIn0.eyJuYmYiOjE0OTQ4MDg0MTQsImV4cCI6MTQ5NDgwODcxNCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoibXZjIiwibm9uY2UiOiI2MzYzMDQwNTIxMjQ5MjIxNTYuWkRVd05tVmhNRGd0Wm1SaU5TMDBOV0ZtTFdFMU9XRXRZV1EzT1ROaVlXTTBZV0l4WldGaFlUWmtNVEV0TkRnNU9TMDBOREptTFdGbE1UVXRNemsyTkRrME1UQTJaV0pqIiwiaWF0IjoxNDk0ODA4NDE0LCJjX2hhc2giOiJCMWNGdWZveG0yUEVHY3hybUh6djRBIiwic2lkIjoiOWQzNTk5NzI2OGI0YTZlYzE2NWNkYTgwMDVhZmE1N2IiLCJzdWIiOiI4ODQyMTExMyIsImF1dGhfdGltZSI6MTQ5NDgwODQwNSwiaWRwIjoibG9jYWwiLCJhbXIiOlsicHdkIl19.rEq236mmMptCws4U0jD5L6B3oCZ5Z-Zksxd-CLEJYysxaUqA9CrEzjXrz9sL6FycHxGoz0fI9MzF0nSPG6J-oivg7XYN2gUsYO44iFsiLwbrtPO81r9FgylgjXpvQmgA6KvndI_NOrAR8ll1E7Y0aanrabAThPdHxfke0RcVP8O8FZzfuYgO5CFWUX-4j2_ocedOdKwak6vx8D3T_K1h06LWi25BEeVvHqu63jprF1ZtBxQ7mB8fwln1xdMLQhBSge9ZvtYZvF8HfNy2tJW8LyRuTy3Yj92RCBhLChbTYKx86F3Uy-Kd_Vzas2CVbOcdpuOfdwAqDIAxS-K8rGJgXA"
+2017-05-15 08:33:34.058 +08:00 [Verbose] Code issued for "mvc (MVC Client)" / "88421113": "daad6c1117ef42ba648357d80252f9e7cacec6251035c88a8d84562081ce37b0"
+2017-05-15 08:33:34.060 +08:00 [Information] Authorize endpoint response
+"{
+  \"SubjectId\": \"88421113\",
+  \"ClientId\": \"mvc\",
+  \"RedirectUri\": \"http://localhost:5012/signin-oidc\",
+  \"State\": \"CfDJ8MCjwa0dWX1GnXXtEFMrXlKHk5jvfEtBF_3gl_I8gqRUb_d5EsLNBmS-bqzqF9lZWuEJIE7LTOsXZ8PkZBlxfQ4aV_hbhXrt_BErumrAtU0RFPqCClYPUwR_PhstHX10ZUomGLZ3W_iyYTh1xcBBjMdlpxeQDIqZiJ3tQvvF2xBwSn7abQBA2WWL-cmhZZXfDMCUhMr-6Awz8bhVLfpLgeUK-FQyL90EE2IKTHRmDZatNzuC1DQONCthj4rEvgH7hmB1ER7EOQtWSQDcRbgKpZvOVoQqkgnJBkfqg1xVtuseLDdftI-_67cEyO8XpuWZimesah01-BvE4Yx5dV8trz4\",
+  \"Scope\": \"openid profile api1 offline_access\"
+}"
+2017-05-15 08:33:34.066 +08:00 [Verbose] End Authorize Request. Result type: "IdentityServer4.Endpoints.Results.AuthorizeResult"
+2017-05-15 08:33:34.068 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.AuthorizeResult"
+2017-05-15 08:33:34.164 +08:00 [Debug] Request path "/connect/token" matched to endpoint type Token
+2017-05-15 08:33:34.166 +08:00 [Debug] Mapping found for endpoint: Token, creating handler: "IdentityServer4.Endpoints.TokenEndpoint"
+2017-05-15 08:33:34.172 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.TokenEndpoint" for "/connect/token"
+2017-05-15 08:33:34.179 +08:00 [Verbose] Processing token request.
+2017-05-15 08:33:34.188 +08:00 [Debug] Start token request.
+2017-05-15 08:33:34.199 +08:00 [Debug] Start client validation
+2017-05-15 08:33:34.208 +08:00 [Debug] Start parsing Basic Authentication secret
+2017-05-15 08:33:34.215 +08:00 [Debug] Start parsing for secret in post body
+2017-05-15 08:33:34.218 +08:00 [Debug] Parser found secret: "PostBodySecretParser"
+2017-05-15 08:33:34.221 +08:00 [Debug] Secret id found: "mvc"
+2017-05-15 08:33:34.228 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:34.241 +08:00 [Debug] Secret validator success: "HashedSharedSecretValidator"
+2017-05-15 08:33:34.245 +08:00 [Debug] Client validation success
+2017-05-15 08:33:34.254 +08:00 [Debug] Start token request validation
+2017-05-15 08:33:34.269 +08:00 [Debug] Start validation of authorization code token request
+2017-05-15 08:33:34.295 +08:00 [Debug] "JnYU/VXEMSIqOqAW5RrjjGMXIszfY40nNVJBPCGaeq4=" found in database: True
+2017-05-15 08:33:34.329 +08:00 [Debug] removing "JnYU/VXEMSIqOqAW5RrjjGMXIszfY40nNVJBPCGaeq4=" persisted grant from database
+2017-05-15 08:33:34.346 +08:00 [Debug] Validation of authorization code token request success
+2017-05-15 08:33:34.350 +08:00 [Verbose] Calling into custom request validator: "IdentityServer4.Validation.DefaultCustomTokenRequestValidator"
+2017-05-15 08:33:34.362 +08:00 [Information] Token request validation success
+"{
+  \"ClientId\": \"mvc\",
+  \"ClientName\": \"MVC Client\",
+  \"GrantType\": \"authorization_code\",
+  \"AuthorizationCode\": \"daad6c1117ef42ba648357d80252f9e7cacec6251035c88a8d84562081ce37b0\",
+  \"Raw\": {
+    \"client_id\": \"mvc\",
+    \"client_secret\": \"secret\",
+    \"code\": \"daad6c1117ef42ba648357d80252f9e7cacec6251035c88a8d84562081ce37b0\",
+    \"grant_type\": \"authorization_code\",
+    \"redirect_uri\": \"http://localhost:5012/signin-oidc\"
+  }
+}"
+2017-05-15 08:33:34.372 +08:00 [Verbose] Creating token response
+2017-05-15 08:33:34.380 +08:00 [Verbose] Processing authorization code request
+2017-05-15 08:33:34.391 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:34.398 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:34.405 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:34.414 +08:00 [Verbose] Creating access token
+2017-05-15 08:33:34.425 +08:00 [Debug] Getting claims for access token for client: "mvc"
+2017-05-15 08:33:34.430 +08:00 [Debug] Getting claims for access token for subject: "88421113"
+2017-05-15 08:33:34.538 +08:00 [Verbose] Creating JWT access token
+2017-05-15 08:33:34.546 +08:00 [Debug] Creating refresh token
+2017-05-15 08:33:34.552 +08:00 [Debug] Setting an absolute lifetime: 2592000
+2017-05-15 08:33:34.579 +08:00 [Debug] "Gd9KFdpbumLET86iCEAausphBsx+shMdAaV+lw28R4U=" not found in database
+2017-05-15 08:33:34.586 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:34.596 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:34.603 +08:00 [Debug] Found ["api1"] API scopes in database
+2017-05-15 08:33:34.606 +08:00 [Verbose] Creating identity token
+2017-05-15 08:33:34.610 +08:00 [Debug] Getting claims for identity token for subject: "88421113" and client: "mvc"
+2017-05-15 08:33:34.612 +08:00 [Debug] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2017-05-15 08:33:34.614 +08:00 [Verbose] Creating JWT identity token
+2017-05-15 08:33:34.620 +08:00 [Verbose] Identity token issued for "mvc (MVC Client)" / "no subject": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJkZGQ5ZTZlNDgxY2NkODBjNTU4NGUxNGViMWU3YzM3IiwidHlwIjoiSldUIn0.eyJuYmYiOjE0OTQ4MDg0MTQsImV4cCI6MTQ5NDgwODcxNCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoibXZjIiwibm9uY2UiOiI2MzYzMDQwNTIxMjQ5MjIxNTYuWkRVd05tVmhNRGd0Wm1SaU5TMDBOV0ZtTFdFMU9XRXRZV1EzT1ROaVlXTTBZV0l4WldGaFlUWmtNVEV0TkRnNU9TMDBOREptTFdGbE1UVXRNemsyTkRrME1UQTJaV0pqIiwiaWF0IjoxNDk0ODA4NDE0LCJhdF9oYXNoIjoiS3N3RUtQMjFENUlmU1c3WFRldGdJZyIsInNpZCI6IjlkMzU5OTcyNjhiNGE2ZWMxNjVjZGE4MDA1YWZhNTdiIiwic3ViIjoiODg0MjExMTMiLCJhdXRoX3RpbWUiOjE0OTQ4MDg0MDUsImlkcCI6ImxvY2FsIiwiYW1yIjpbInB3ZCJdfQ.742RK8AkCT5AbtqHrUy2NXaaZrxa2jyqF7VqU3L-kcA0SSyQ9jZ9nN4YOrQnuY41WY2e3DIfqigPZH2qUyM7kPPJYX8Q3SpgEbCuWBKIepiCUm4WM8653StfR7B2SYBYoaAfgOt-tnq7MlQAc6cw2yEFYhW_6WFkMf_cyZCUR6F-MqnVlrnk5oUG49-1HQBS4FbsJGY5EXViGvWAsXZUB6QdxmXSBPILiEWfvJ9qCYagh_0Cs3OwzPD30I0266IqWHVv7YUcASNPVhF8jFiehJ9TaTslyhl6kPqoBvmRR89odkvtKnsqokes-XYsyTwLsNKADMpYgeZOAXsM2I9tbQ"
+2017-05-15 08:33:34.628 +08:00 [Verbose] Refresh token issued for "mvc (MVC Client)" / "no subject": "3aa536a0b4e5601cb6c6962168ccfc1d8552d637b329741532a575397b8fdd10"
+2017-05-15 08:33:34.633 +08:00 [Verbose] Access token issued for "mvc (MVC Client)" / "no subject": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJkZGQ5ZTZlNDgxY2NkODBjNTU4NGUxNGViMWU3YzM3IiwidHlwIjoiSldUIn0.eyJuYmYiOjE0OTQ4MDg0MTQsImV4cCI6MTQ5NDgxMjAxNCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJhcGkxIl0sImNsaWVudF9pZCI6Im12YyIsInN1YiI6Ijg4NDIxMTEzIiwiYXV0aF90aW1lIjoxNDk0ODA4NDA1LCJpZHAiOiJsb2NhbCIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJhcGkxIiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInB3ZCJdfQ.Af8lKb8-OZbOVMViBIW3J9pGz4PJKwZ_asw1hkpmnu4jUgLIfxjT6jOsgXdErxROmL9F9_e94go8t5eCIOpAjdjgtVuIbw-tZqtf7X0D_993YHDkyZHd3aOvgysCRDu3R0ziBctRtrgl9yb56HbUIgsD89xMDtgkNnRWphwHYUc4TMR966NVvushQee0ZEljhTm6Z62jJHvFnD83qGZPeWLpxHT7ZqoMEIt_s9FNx_IMWHDU7VQBK03lDl_LeqmfsxBpRLNNN-pFOb2RyRJekQZCHld2G__NMV82Ap8qU5Wfx0jpnzOvV0rP8YGkJy32OumLsyOix9LW3rTRaEcHPg"
+2017-05-15 08:33:34.641 +08:00 [Debug] Token request success.
+2017-05-15 08:33:34.643 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.TokenResult"
+2017-05-15 08:33:34.671 +08:00 [Debug] Request path "/connect/userinfo" matched to endpoint type UserInfo
+2017-05-15 08:33:34.674 +08:00 [Debug] Mapping found for endpoint: UserInfo, creating handler: "IdentityServer4.Endpoints.UserInfoEndpoint"
+2017-05-15 08:33:34.679 +08:00 [Information] Invoking IdentityServer endpoint: "IdentityServer4.Endpoints.UserInfoEndpoint" for "/connect/userinfo"
+2017-05-15 08:33:34.694 +08:00 [Debug] Start userinfo request
+2017-05-15 08:33:34.700 +08:00 [Information] ValidateAsync: Locating bearer token
+2017-05-15 08:33:34.704 +08:00 [Verbose] Authorization header value found
+2017-05-15 08:33:34.706 +08:00 [Verbose] Authorization scheme is bearer
+2017-05-15 08:33:34.709 +08:00 [Debug] Bearer token found in header
+2017-05-15 08:33:34.712 +08:00 [Debug] Token found: "AuthorizationHeader"
+2017-05-15 08:33:34.719 +08:00 [Verbose] Start access token validation
+2017-05-15 08:33:34.781 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:34.795 +08:00 [Debug] "mvc" found in database: True
+2017-05-15 08:33:34.803 +08:00 [Debug] Token validation success
+"{
+  \"ValidateLifetime\": true,
+  \"AccessTokenType\": \"Jwt\",
+  \"ExpectedScope\": \"openid\",
+  \"Claims\": {
+    \"nbf\": 1494808414,
+    \"exp\": 1494812014,
+    \"iss\": \"http://localhost:5000\",
+    \"aud\": [
+      \"http://localhost:5000/resources\",
+      \"api1\"
+    ],
+    \"client_id\": \"mvc\",
+    \"sub\": \"88421113\",
+    \"auth_time\": 1494808405,
+    \"idp\": \"local\",
+    \"scope\": [
+      \"openid\",
+      \"profile\",
+      \"api1\",
+      \"offline_access\"
+    ],
+    \"amr\": \"pwd\"
+  }
+}"
+2017-05-15 08:33:34.818 +08:00 [Verbose] Creating userinfo response
+2017-05-15 08:33:34.827 +08:00 [Debug] Scopes in access token: "openid profile api1 offline_access"
+2017-05-15 08:33:34.835 +08:00 [Debug] Found ["openid", "profile"] identity scopes in database
+2017-05-15 08:33:34.841 +08:00 [Debug] Requested claim types: "sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at"
+2017-05-15 08:33:34.849 +08:00 [Information] Profile service returned to the following claim types: ""
+2017-05-15 08:33:34.851 +08:00 [Debug] End userinfo request
+2017-05-15 08:33:34.857 +08:00 [Verbose] Invoking result: "IdentityServer4.Endpoints.Results.UserInfoResult"
+2017-05-15 08:34:09.217 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:34:09.232 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:35:09.247 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:35:09.309 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:36:09.319 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:36:09.331 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:37:09.350 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:37:09.357 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:38:09.365 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:38:09.392 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:39:09.399 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:39:09.419 +08:00 [Debug] Clearing 1 tokens
+2017-05-15 08:40:09.431 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:40:09.438 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:41:09.445 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:41:09.451 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:42:09.464 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:42:09.469 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:43:09.482 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:43:09.488 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:44:09.493 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:44:09.500 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:45:09.512 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:45:09.520 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:46:09.538 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:46:09.546 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:47:09.564 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:47:09.570 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:48:09.573 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:48:09.579 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:49:09.593 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:49:09.601 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:50:09.615 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:50:09.628 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:51:09.643 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:51:09.649 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:52:09.662 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:52:09.668 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:53:09.688 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:53:09.694 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:54:09.716 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:54:09.722 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:55:09.737 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:55:09.742 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:56:09.757 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:56:09.763 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:57:09.772 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:57:09.778 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:58:09.793 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:58:09.798 +08:00 [Debug] Clearing 0 tokens
+2017-05-15 08:59:09.808 +08:00 [Verbose] Querying for tokens to clear
+2017-05-15 08:59:09.815 +08:00 [Debug] Clearing 0 tokens

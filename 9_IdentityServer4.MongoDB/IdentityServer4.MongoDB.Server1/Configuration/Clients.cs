@@ -143,31 +143,53 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
 
                     AccessTokenType = AccessTokenType.Reference
                 },
-
-                ///////////////////////////////////////////
-                // MVC Implicit Flow Samples
-                //////////////////////////////////////////
+                // OpenID Connect hybrid flow and client credentials client (MVC)
                 new Client
                 {
                     ClientId = "mvc",
-                    ClientName = "MVC Implicit",
-                    //ClientUri = "http://identityserver.io",
+                    ClientName = "MVC Client",
+                    AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
 
-                    AllowedGrantTypes = GrantTypes.Implicit,
-                    AllowAccessTokensViaBrowser = true,
-                    ClientSecrets = { new Secret("secret".Sha256()) },
-                    RedirectUris =  { "http://localhost:5012/signin-oidc" },
-                    LogoutUri = "http://localhost:5012/signout-oidc",
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
+
+                    RedirectUris = { "http://localhost:5012/signin-oidc" },
                     PostLogoutRedirectUris = { "http://localhost:5012/signout-callback-oidc" },
 
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        IdentityServerConstants.StandardScopes.Email,
-                        "api1", "api2.read_only"
+                        "api1"
                     },
+                    AllowOfflineAccess = true
                 },
+                /////////////////////////////////////////////
+                //// MVC Implicit Flow Samples
+                ////////////////////////////////////////////
+                //new Client
+                //{
+                //    ClientId = "mvc",
+                //    ClientName = "MVC Implicit",
+                //    //ClientUri = "http://identityserver.io",
+
+                //    AllowedGrantTypes = GrantTypes.Implicit,
+                //    AllowAccessTokensViaBrowser = true,
+                //    ClientSecrets = { new Secret("secret".Sha256()) },
+                //    RedirectUris =  { "http://localhost:5012/signin-oidc" },
+                //    LogoutUri = "http://localhost:5012/signout-oidc",
+                //    PostLogoutRedirectUris = { "http://localhost:5012/signout-callback-oidc" },
+
+                //    AllowedScopes =
+                //    {
+                //        IdentityServerConstants.StandardScopes.OpenId,
+                //        IdentityServerConstants.StandardScopes.Profile,
+                //        IdentityServerConstants.StandardScopes.Email,
+                //        "api1", "api2.read_only"
+                //    },
+                //},
                 /*
                 ///////////////////////////////////////////
                 // MVC Manual Implicit Flow Sample
@@ -192,7 +214,7 @@ namespace IdentityServer4.MongoDB.Server1.Configuration
                 //////////////////////////////////////////
                 new Client
                 {
-                    ClientId = "mvc",
+                    ClientId = "mvc1",
                     ClientName = "MVC Hybrid",
                     ClientUri = "http://identityserver.io",
 
